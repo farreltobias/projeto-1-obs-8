@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entrar — ODS 8</title>
+    <meta name="description" content="Página de login do projeto ODS 8.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar">
+    <div class="container">
+        <h1><a href="index.html" class="logo" aria-label="Ir para a página inicial">ODS 8</a></h1>
+        <nav aria-label="Acessibilidade">
+            <button id="btn-contraste" aria-pressed="false">Alto contraste</button>
+            <button id="btn-fontemais" aria-label="Aumentar fonte">A+</button>
+            <button id="btn-fontemenos" aria-label="Diminuir fonte">A−</button>
+        </nav>
+        <nav aria-label="Autenticação">
+            <a class="link-cadastro" href="cadastro.html">Cadastre-se</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo" class="container">
+    <section class="card" aria-labelledby="login-titulo">
+        <h2 id="login-titulo">Entrar</h2>
+        <p>Acesse sua conta para continuar ao conteúdo principal.</p>
+        <form action="index.html" method="get" novalidate>
+            <fieldset>
+                <legend>Dados de acesso</legend>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com">
+
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password" required minlength="6" autocomplete="current-password"
+                       placeholder="Sua senha">
+
+                <label>
+                    <input type="checkbox" name="lembrar" value="1">
+                    Permanecer conectado
+                </label>
+            </fieldset>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="container">
+        <p>Projeto educativo sobre a ODS 8 — Trabalho decente e crescimento econômico.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

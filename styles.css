@@ -1,0 +1,403 @@
+/* Reset e base acessível */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.6;
+    color: #222;
+    background: #f7f7f7;
+}
+
+:root {
+    --bg: #f7f7f7;
+    --text: #222;
+    --primary: #b01c2e; /* Tom inspirado na paleta dos ODS */
+    --primary-contrast: #ffffff;
+    --card: #ffffff;
+    --muted: #5a5a5a;
+    --border: #e6e6e6;
+}
+
+body.alto-contraste {
+    --bg: #000;
+    --text: #fff;
+    --primary: #ffd400;
+    --primary-contrast: #000;
+    --card: #111;
+    --muted: #e0e0e0;
+    --border: #333;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+}
+
+/* Topbar */
+.topbar {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative; /* for mobile dropdown positioning */
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.topbar .logo {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.topbar button {
+    margin-left: .5rem;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    border: none;
+    border-radius: .4rem;
+    padding: .5rem .75rem;
+    cursor: pointer;
+}
+
+.topbar button:focus {
+    outline: 3px solid #5aa9ff;
+    outline-offset: 2px;
+}
+
+/* Hero */
+.hero {
+    padding: 2rem 0 1rem;
+}
+
+.hero-texto {
+    max-width: 70ch;
+}
+
+.hero .cta {
+    display: inline-block;
+    margin-top: .75rem;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    padding: .6rem .95rem;
+    border-radius: .45rem;
+    text-decoration: none;
+}
+
+/* Cards */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+}
+
+.card details {
+    border-top: 1px dashed var(--border);
+    padding-top: .5rem;
+    margin-top: .5rem;
+}
+
+.card details summary {
+    cursor: pointer;
+}
+
+/* Formulários */
+form label {
+    display: block;
+    margin: .45rem 0;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.quiz .pergunta {
+    display: flex;
+    flex-direction: column;
+}
+
+button[type="button"] {
+    background: var(--primary);
+    color: var(--primary-contrast);
+    border: none;
+    border-radius: .4rem;
+    padding: .6rem .9rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    max-width: fit-content;
+}
+
+output {
+    display: block;
+    margin-top: .5rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 2rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--border);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .hero {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .topbar h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tipografia para títulos (fonte externa) */
+h1, h2, h3 {
+    font-family: "Montserrat", "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Menu principal */
+.menu-principal {
+    display: none; /* mobile default: hidden */
+}
+
+/* Mobile dropdown when open */
+.menu-principal.aberto {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    padding: .5rem;
+    z-index: 10;
+    width: min(320px, 86vw);
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* mobile: vertical */
+    gap: .25rem;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--text);
+    padding: .6rem .65rem;
+    border-radius: .4rem;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus {
+    background: var(--border);
+}
+
+/* Desktop layout */
+@media (min-width: 1200px) {
+    .menu-principal {
+        display: block;
+        position: static;
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+    }
+
+    .menu-principal ul {
+        flex-direction: row;
+        gap: .75rem;
+    }
+}
+
+/* Ícones simples */
+.icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -.2em;
+    fill: currentColor;
+}
+
+.icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+}
+
+/* Galeria de imagens */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: .75rem;
+}
+
+.galeria figure {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 0;
+}
+
+.galeria img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria figcaption {
+    padding: .5rem .65rem;
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+
+/* Mobile menu toggle button */
+.menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: 3px solid #5aa9ff;
+    outline-offset: 2px;
+}
+
+@media (min-width: 1200px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Material Icons alignment */
+.material-icons {
+    font-size: 1.1em; /* match inline icon size similar to previous .icon */
+    vertical-align: -.2em;
+    line-height: 1;
+}
+
+
+/* Fix root variables (ensure CSS custom properties apply) */
+:root {
+    --bg: #f7f7f7;
+    --text: #222;
+    --primary: #b01c2e;
+    --primary-contrast: #ffffff;
+    --card: #ffffff;
+    --muted: #5a5a5a;
+    --border: #e6e6e6;
+}
+
+/* Mobile header fixes */
+@media (max-width: 1199px) {
+    .topbar .container {
+        flex-wrap: wrap;
+    }
+
+    /* Hide secondary navs to avoid crowding on small screens */
+    .topbar nav[aria-label="Acessibilidade"],
+    .topbar nav[aria-label="Autenticação"] {
+        display: none;
+    }
+}
+
+/* Avoid duplicate auth links on desktop by hiding them inside the main menu */
+@media (min-width: 1200px) {
+    .menu-principal .menu-auth {
+        display: none;
+    }
+}
+
+
+/* CSS-only mobile nav (checkbox toggle) */
+.menu-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Swap icons based on state */
+.menu-toggle .icon-close {
+    display: none;
+}
+
+#menu-toggle:checked + label.menu-toggle .icon-menu {
+    display: none;
+}
+
+#menu-toggle:checked + label.menu-toggle .icon-close {
+    display: inline;
+}
+
+/* Open mobile menu when checked */
+#menu-toggle:checked + label + .menu-principal {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .6rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    padding: .5rem;
+    z-index: 10;
+    width: min(320px, 86vw);
+}

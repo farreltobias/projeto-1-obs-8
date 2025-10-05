@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro — ODS 8</title>
+    <meta name="description" content="Página de cadastro do projeto ODS 8.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar">
+    <div class="container">
+        <h1><a href="index.html" class="logo" aria-label="Ir para a página inicial">ODS 8</a></h1>
+        <nav aria-label="Acessibilidade">
+            <button id="btn-contraste" aria-pressed="false">Alto contraste</button>
+            <button id="btn-fontemais" aria-label="Aumentar fonte">A+</button>
+            <button id="btn-fontemenos" aria-label="Diminuir fonte">A−</button>
+        </nav>
+        <nav aria-label="Autenticação">
+            <a class="link-login" href="login.html">Entrar</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo" class="container">
+    <section class="card" aria-labelledby="cadastro-titulo">
+        <h2 id="cadastro-titulo">Criar conta</h2>
+        <p>Preencha o formulário abaixo para criar sua conta.</p>
+        <form action="login.html" method="get" novalidate aria-describedby="cadastro-ajuda">
+            <p id="cadastro-ajuda">Após enviar, você será direcionado para a página de login.</p>
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" required placeholder="Seu nome completo" autocomplete="name">
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required placeholder="seu@email.com" autocomplete="email">
+
+                <label for="nascimento">Data de nascimento</label>
+                <input id="nascimento" name="nascimento" type="date" required>
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(41) 99999-9999">
+            </fieldset>
+
+            <fieldset>
+                <legend>Segurança</legend>
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password" required minlength="6" autocomplete="new-password"
+                       placeholder="Crie uma senha">
+
+                <label for="confirma">Confirmar senha</label>
+                <input id="confirma" name="confirma" type="password" required minlength="6" autocomplete="new-password"
+                       placeholder="Repita a senha">
+            </fieldset>
+
+            <button type="submit">Criar conta</button>
+        </form>
+        <p>Já tem conta? <a href="login.html">Entrar</a></p>
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="container">
+        <p>Projeto educativo sobre a ODS 8 — Trabalho decente e crescimento econômico.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

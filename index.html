@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>ODS 8 — Trabalho decente e crescimento econômico</title>
+    <meta name="description"
+          content="Site educativo e interativo sobre a ODS 8: Trabalho decente e crescimento econômico. Conceitos, metas, indicadores e boas práticas para promover emprego digno e crescimento sustentável.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar">
+    <div class="container">
+        <h1><a href="index.html" class="logo" aria-label="Ir para a página inicial">ODS 8</a></h1>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" hidden>
+        <label class="menu-toggle" for="menu-toggle" aria-controls="menu-principal" aria-label="Abrir menu">
+            <i class="material-icons icon-menu" aria-hidden="true">menu</i>
+            <i class="material-icons icon-close" aria-hidden="true">close</i>
+        </label>
+        <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#metas">Metas</a></li>
+                <li><a href="#indicadores">Indicadores</a></li>
+                <li><a href="#aprenda">Quiz</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li class="menu-auth"><a href="login.html">Entrar</a></li>
+                <li class="menu-auth"><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Acessibilidade">
+            <button id="btn-contraste" aria-pressed="false">Alto contraste</button>
+            <button id="btn-fontemais" aria-label="Aumentar fonte">A+</button>
+            <button id="btn-fontemenos" aria-label="Diminuir fonte">A−</button>
+        </nav>
+        <nav aria-label="Autenticação">
+            <a class="link-login" href="login.html">Entrar</a>
+            <a class="link-cadastro" href="cadastro.html">Cadastre-se</a>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo" class="container">
+    <section class="hero" aria-labelledby="titulo-hero">
+        <div class="hero-texto">
+            <h2 id="titulo-hero"><span class="icon-wrap"><i class="material-icons">work</i><i
+                    class="material-icons"
+            >trending_up</i>Trabalho decente e crescimento econômico</span>
+            </h2>
+            <p>
+                A ODS 8 busca promover crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e
+                produtivo e trabalho decente para todas e todos.
+            </p>
+            <a class="cta" href="#metas">Conheça as metas</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="card" aria-labelledby="sobre-titulo">
+        <h3 id="sobre-titulo">Por que a ODS 8 importa?</h3>
+        <p>
+            Trabalho decente significa oportunidades para que mulheres e homens obtenham um trabalho produtivo e
+            adequadamente remunerado, exercido em condições de liberdade, equidade, segurança e dignidade humana.
+        </p>
+        <ul>
+            <li>Reduz a pobreza e a desigualdade de renda;</li>
+            <li>Estimula inovação, formalização e produtividade;</li>
+            <li>Fortalece direitos trabalhistas e inclusão social.</li>
+        </ul>
+    </section>
+
+    <section id="metas" class="card" aria-labelledby="metas-titulo">
+        <h3 id="metas-titulo">Metas selecionadas da ODS 8</h3>
+        <details>
+            <summary><strong>8.3</strong> Promover políticas orientadas para o desenvolvimento, que apoiem atividades
+                produtivas, emprego decente e empreendedorismo.
+            </summary>
+            <p>Dica prática: incentive compras de pequenos negócios locais e a formalização via MEI.</p>
+        </details>
+        <details>
+            <summary><strong>8.5</strong> Alcançar emprego pleno e produtivo e trabalho decente para todas as mulheres e
+                homens, incluindo jovens e pessoas com deficiência, e remuneração igual para trabalho de igual valor.
+            </summary>
+            <p>Dica prática: adote processos de recrutamento inclusivos e faixas salariais transparentes.</p>
+        </details>
+        <details>
+            <summary><strong>8.7</strong> Erradicar o trabalho forçado, acabar com a escravidão moderna e o tráfico de
+                pessoas e eliminar as piores formas de trabalho infantil.
+            </summary>
+            <p>Dica prática: exija conformidade de fornecedores e monitore cadeias de suprimento.</p>
+        </details>
+        <details>
+            <summary><strong>8.8</strong> Proteger direitos trabalhistas e promover ambientes de trabalho seguros para
+                todos.
+            </summary>
+            <p>Dica prática: implemente programas de saúde e segurança do trabalho (SST) e canais de denúncia.</p>
+        </details>
+    </section>
+
+    <section id="indicadores" class="card" aria-labelledby="indicadores-titulo">
+        <h3 id="indicadores-titulo">Indicadores e autoavaliação</h3>
+        <p>Use a checklist para estimar a aderência às boas práticas da ODS 8 na sua organização.</p>
+        <form id="checklist" aria-describedby="resultado-checklist">
+            <fieldset>
+                <legend>Checklist de boas práticas</legend>
+                <label><input type="checkbox" name="item" value="1"> Política de remuneração igual para trabalho de
+                    igual valor</label>
+                <label><input type="checkbox" name="item" value="1"> Programa de inclusão e acessibilidade no
+                    recrutamento</label>
+                <label><input type="checkbox" name="item" value="1"> Fornecedores auditados quanto a trabalho
+                    infantil/forçado</label>
+                <label><input type="checkbox" name="item" value="1"> Plano ativo de SST e prevenção de assédio</label>
+                <label><input type="checkbox" name="item" value="1"> Capacitação contínua e trilhas de carreira</label>
+            </fieldset>
+            <button type="button" id="btn-avaliar">Calcular aderência</button>
+            <output id="resultado-checklist" aria-live="polite"></output>
+        </form>
+    </section>
+
+    <section id="aprenda" class="card" aria-labelledby="quiz-titulo">
+        <h3 id="quiz-titulo">Quiz rápido</h3>
+        <p>Teste seus conhecimentos sobre a ODS 8.</p>
+        <div class="quiz" role="group" aria-labelledby="quiz-titulo">
+            <div class="pergunta">
+                <p>1) Trabalho decente envolve apenas salário?</p>
+                <label><input type="radio" name="q1" value="certa"> Não, também envolve segurança, equidade e dignidade.</label>
+                <label><input type="radio" name="q1" value="errada"> Sim, apenas salário.</label>
+            </div>
+            <div class="pergunta">
+                <p>2) Transparência salarial ajuda a ODS 8?</p>
+                <label><input type="radio" name="q2" value="certa"> Sim, reduz desigualdades e promove equidade.</label>
+                <label><input type="radio" name="q2" value="errada"> Não, não tem relação.</label>
+            </div>
+            <button type="button" id="btn-quiz">Ver resultado</button>
+            <output id="resultado-quiz" aria-live="polite"></output>
+        </div>
+    </section>
+
+    <section id="galeria" class="card" aria-labelledby="galeria-titulo">
+        <h3 id="galeria-titulo">Galeria</h3>
+        <div class="galeria">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop"
+                     alt="Equipe diversa reunida em ambiente de trabalho colaborativo">
+                <figcaption>Trabalho colaborativo e inclusão</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop"
+                     alt="Capacitação profissional com caderno e caneta em mesa de escritório">
+                <figcaption>Capacitação e aprendizado contínuo</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=800&auto=format&fit=crop"
+                     alt="Pessoa utilizando notebook representando trabalho decente e flexível">
+                <figcaption>Trabalho digno e flexível</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=800&q=80"
+                     alt="Gráfico de crescimento econômico em papel com laptop ao fundo">
+                <figcaption>Crescimento econômico sustentável</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="recursos" class="card" aria-labelledby="recursos-titulo">
+        <h3 id="recursos-titulo">Recursos úteis</h3>
+        <ul>
+            <li><a target="_blank" rel="noopener" href="https://brasil.un.org/pt-br/sdgs/8">ONU Brasil — ODS 8</a></li>
+            <li><a target="_blank" rel="noopener"
+                   href="https://www.ilo.org/global/topics/decent-work/lang--pt/index.htm">OIT — Trabalho Decente</a>
+            </li>
+            <li><a target="_blank" rel="noopener" href="https://www.gov.br/economia/pt-br/assuntos/trabalho">Governo
+                Federal — Assuntos do Trabalho</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer class="rodape">
+    <div class="container">
+        <p>
+            Projeto educativo sobre a ODS 8 — Trabalho decente e crescimento econômico. Feito com HTML, CSS e JS.
+        </p>
+    </div>
+</footer>
+</body>
+</html>
