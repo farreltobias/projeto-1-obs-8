@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #1025c5;
+    text-shadow: 1px 1px 3px #aaa;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #444;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.perfil {
+    border-radius: 50%;
+    border: 3px solid #1025c5;
+    width: 200px;
+    height: 200px;
+}
+
+.ods {
+    width: 250px;
+    height: auto;
+}
+
+.contatos li {
+    margin: 8px 0;
+}
+
+ul li i {
+    vertical-align: middle;
+    margin-right: 5px;
+    color: #1025c5;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.resumo {
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background: #1025c5;
+    color: white;
+    border-radius: 5px;
+}
