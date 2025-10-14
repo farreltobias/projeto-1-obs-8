@@ -1,4 +1,5 @@
 # Projeto: ODS 8 — Trabalho decente e crescimento econômico
+Participantes: Felippe Rodrigues Nascimento Costa - RA 2648814, Guilherme Farrel Garcia Calixto Tobias De Souza - RA 2504065
 
 Este projeto é um site estático, acessível e responsivo em HTML, CSS e JavaScript, criado para informar e engajar pessoas e organizações sobre a ODS 8 (Trabalho decente e crescimento econômico).
 
