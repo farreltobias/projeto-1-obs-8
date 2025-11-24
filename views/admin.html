@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Cadastro de Usuários</title>
+
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/admin.css">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+<header class="topbar">
+    <div class="container">
+        <h1><a href="index.html" class="logo">ODS 8</a></h1>
+
+        <nav id="menu-principal" class="menu-principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="card admin-card">
+        <h2>Painel Administrativo</h2>
+        <p>Cadastre novos usuários e gerencie a lista abaixo.</p>
+
+        <form id="form-cadastro" class="form-admin">
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="botoes">
+                <button type="button" id="btn-cadastrar" class="btn-primary">Cadastrar</button>
+                <button type="button" id="btn-limpar" class="btn-secondary">Limpar</button>
+                <button type="button" id="btn-excluir-todos" class="btn-danger">Excluir todos</button>
+            </div>
+        </form>
+
+        <h3>Pesquisar usuários</h3>
+        <div class="pesquisa-area">
+            <input type="text" id="pesquisa" placeholder="Pesquisar por nome ou e-mail">
+            <button id="btn-pesquisar" class="btn-secondary">Pesquisar</button>
+        </div>
+
+        <h3>Lista de Usuários</h3>
+        <ul id="lista-usuarios" class="lista-usuarios"></ul>
+
+    </section>
+
+</main>
+
+<footer class="rodape-admin">
+        <p>© 2025 — Painel Administrativo ODS 8</p>
+        <p>Desenvolvido por Guilherme Farrel e Felippe Rodrigues.</p>
+</footer>
+
+
+<script src="js/admin.js"></script>
+</body>
+</html>
