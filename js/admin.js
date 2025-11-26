@@ -1,9 +1,5 @@
-// Nome da chave no localStorage
 const STORAGE_KEY = "usuariosODS8";
 
-// -------------------------
-// Utilidades
-// -------------------------
 function carregarUsuarios() {
     return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 }
@@ -37,9 +33,6 @@ function atualizarLista(filtro = "") {
     });
 }
 
-// -------------------------
-// Funções principais
-// -------------------------
 
 function cadastrar() {
     const nome = document.getElementById("nome").value.trim();
@@ -90,14 +83,10 @@ function pesquisar() {
     atualizarLista(texto);
 }
 
-// -------------------------
-// Eventos
-// -------------------------
 
 document.getElementById("btn-cadastrar").addEventListener("click", cadastrar);
 document.getElementById("btn-limpar").addEventListener("click", limparCampos);
 document.getElementById("btn-excluir-todos").addEventListener("click", excluirTodos);
 document.getElementById("btn-pesquisar").addEventListener("click", pesquisar);
 
-// Atualiza lista ao carregar página
 atualizarLista();
